@@ -1,0 +1,72 @@
+.team__acco-title {
+    font-family: Gagalin;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 50px;
+    &:before {
+        content: "";
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border: 6px solid transparent;
+        border-top-color: $orange;
+        border-bottom-width: 0;
+        margin-right: 20px;
+
+    }
+    &:hover {
+        color: $orange;
+        
+        &:before {
+            transform: rotate(180deg);
+        }
+        
+    }
+   
+    
+}
+
+.team__acco-content {
+    display: flex;
+    align-items: center;
+    height: 0;
+    overflow: hidden;
+    
+    
+    
+    
+}
+.team__acco-content--active{
+    height: auto;
+}
+
+.team__acco-pic {
+    width: 120px ;
+    height: 120px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+}
+
+.team__acco-text {
+    width: 70%;
+    margin-left: auto;
+}
+
+.team__acco-text-title {
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.team__acco-item {
+    margin-bottom: 20px;
+}
+
+.team__acco-item--active .team__acco-title {
+    color: $orange;
+        
+        &:before {
+            transform: rotate(180deg);
+        }
+
+}

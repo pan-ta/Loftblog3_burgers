@@ -1,0 +1,16 @@
+.menu {
+    background: url("../img/bg/bg-menu.jpg") center center no-repeat;
+    background-size: cover;
+}
+
+.menu__content {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu__section-title {
+    position: absolute;
+    top: 10vh;
+    left: 8vw;
+}

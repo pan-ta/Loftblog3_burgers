@@ -1,0 +1,51 @@
+.footer {
+    background: url("../img/bg/bg-order.jpg") center center no-repeat;
+    background-size: cover;
+    
+}
+
+.footer__container {
+    padding: 1vw 2vw;
+}
+
+.footer__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer__contacts {
+    font-style: normal;
+    text-decoration: none;
+}
+
+.footer__address {
+    margin-bottom: 3px;
+}
+
+.footer__phone {
+    color: $red;
+}
+
+.footer__phone-link {
+    text-decoration: none;
+    font-weight: 700;
+    color: $red;
+}
+
+
+.footer__socials-list {
+    display: flex;
+    align-items: center;
+}
+
+.footer__socials-item {
+    margin-left: 15px;
+}
+
+.footer__socials-link {
+    display: inline-block;
+    width: 15px;
+    height: 10px;
+    background: $orange;
+}

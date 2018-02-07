@@ -1,0 +1,126 @@
+.wrapper {
+    position: relative;
+    // зачем всегда позишн релатив на враппер?
+    width: 100%;
+    min-width: 940px + 20px; 
+    // ??
+    min-height: 100%;
+    overflow: hidden;
+    // чтобы не было гориз скрола
+    background-color: $black;
+  
+  }
+
+.section {
+    height: 100vh; //не растягивается, даже есл не влезает содержимое :ООО//
+    min-height: 650px;
+  }
+
+.container {
+    width: 940px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 1%  0;
+    //или как сделать отступ от верха?? или вообще не тут? % vh px что лучше?
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+
+.container__content-in-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+}
+
+.button {
+    display: inline-block;
+    background-color: $red;
+    border-radius: 5px;
+    padding: 8px 14px;
+    color: #fff;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-decoration: none;
+    &:hover {
+        background-color: $dark-red;
+    }
+}
+
+.section-title {
+    font-family: 'Gagalin', sans-serif;
+    font-size: 72px;
+    color: $orange;
+    margin-bottom: 30px;
+    &_color {
+        &_black {
+            color: $black;
+        }
+        &_white {
+            color: #fff;
+        }
+    }
+}
+
+.fixed-menu {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+.fixed-menu__link {
+    
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    border: 1px #fff solid;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // &:-active {
+    //     &:before {
+    //         content: "";
+    //         width: 5px;
+    //         height: 5px;
+    //         border-radius: 50%;
+
+
+    //     }
+    // }
+}
+
+.fixed-menu__link--active {
+    &:before {
+        content: "";
+        width: 7px;
+        height: 7px;
+        background: #fff;
+        border-radius: 50%;
+        display: block;
+
+    }
+}
+
+
+.godown-btn {
+    position: fixed;
+    bottom: 50px;
+    right: 50%; //как сделать по центру на позишн фиксд? 
+}
+
+.icon {
+    &_color {
+        &_red {
+            fill: $red;
+            stroke: #000;
+        }
+    }
+}
+
+// .icon {
+//     fill: red;
+// }

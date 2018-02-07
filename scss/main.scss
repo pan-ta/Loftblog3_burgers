@@ -1,0 +1,42 @@
+// config
+@import "config/mixins.scss";
+@import "config/variables.scss";
+
+// layout
+
+@import "layout/base.scss";
+@import "layout/ajustments.scss";
+@import "layout/fonts.scss";
+
+//sections/common
+
+@import "sections/common/common.scss";
+
+//sections/head
+
+@import "sections/head/head.scss";
+@import "sections/head/header.scss";
+
+//sections/about
+@import "sections/about/about.scss";
+
+//sections/team
+@import "sections/team/team.scss";
+@import "sections/team/team_acco.scss";
+
+//sections/menu
+@import "sections/menu/menu.scss";
+@import "sections/menu/menu_acco.scss";
+
+//sections/reviews
+@import "sections/reviews/reviews.scss";
+
+//sections/order
+@import "sections/order/order.scss";
+@import "sections/order/order_form.scss";
+
+//sections/map
+@import "sections/map/map.scss";
+
+//sections/footer
+@import "sections/footer/footer.scss";

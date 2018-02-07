@@ -1,0 +1,30 @@
+.head {
+    background: url("../img/bg/bg-head.jpg") center center no-repeat;
+    background-size: cover;
+}
+
+.head__content {
+    
+    display: flex;
+    align-items: center;
+    
+    }
+
+.head__pic {
+    margin-top: -10%;
+    margin-right: 3%;
+    // width: 60%;
+}
+
+.head__pic-img {
+    // max-width: 100%;
+    // так ограничила картинку??
+}
+
+
+
+.head__desc-text {
+    font-family: "Lifehack";
+    font-size: 65px;
+    line-height: 0.9;
+}

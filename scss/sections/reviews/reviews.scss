@@ -26,7 +26,8 @@
     bottom: 0;
     right: 0;
     background-color: rgba(0,0,0,0.6);
-    padding: 10%;
+    padding: 8%;
+    padding-top: 14%;
     .reviews__item:hover & {
         opacity: 100;
     }
@@ -37,9 +38,10 @@
 
 .reviews__hover-title {
     font-family: Gagalin;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 .reviews__hover-text {
+    font-size: 15px;
     margin-bottom: 15px;
 }

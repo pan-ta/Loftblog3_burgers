@@ -40,11 +40,12 @@
     display: inline-block;
     background-color: $red;
     border-radius: 5px;
-    padding: 8px 14px;
+    padding: 8px 17px;
     color: #fff;
     font-size: 13px;
     text-transform: uppercase;
     text-decoration: none;
+    transition: 300ms;
     &:hover {
         background-color: $dark-red;
     }
@@ -54,7 +55,12 @@
     font-family: 'Gagalin', sans-serif;
     font-size: 72px;
     color: $orange;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    &_marg {
+        &_small {
+            margin-bottom: 15px;
+        }
+    }
     &_color {
         &_black {
             color: $black;
@@ -81,16 +87,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    // &:-active {
-    //     &:before {
-    //         content: "";
-    //         width: 5px;
-    //         height: 5px;
-    //         border-radius: 50%;
-
-
-    //     }
-    // }
+    
 }
 
 .fixed-menu__link--active {
@@ -108,15 +105,33 @@
 
 .godown-btn {
     position: fixed;
-    bottom: 50px;
+    bottom: 15px;
     right: 50%; //как сделать по центру на позишн фиксд? 
 }
+
+.godown-btn__icon {
+    width: 27px;
+    height: 27px;
+    
+    
+}
+
+
 
 .icon {
     &_color {
         &_red {
             fill: $red;
-            stroke: #000;
+            
+        }
+        &_orange {
+            fill: $orange;
+        }
+        &_green {
+            fill: $green;
+        }
+        &_white {
+            fill: #fff;
         }
     }
 }

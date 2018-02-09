@@ -32,7 +32,11 @@
     font-weight: 700;
     color: $red;
 }
-
+.footer__phone-icon {
+    width: 12px;
+    height: 12px;
+    margin-right: 10px;
+}
 
 .footer__socials-list {
     display: flex;
@@ -40,12 +44,25 @@
 }
 
 .footer__socials-item {
-    margin-left: 15px;
+    margin-left: 22px;
 }
 
 .footer__socials-link {
     display: inline-block;
-    width: 15px;
-    height: 10px;
-    background: $orange;
+    // max-width: 23px; зачем?
+    // max-height: 20px;
+    opacity: .3;
+    transition: .3s;
+    &:hover {
+        opacity: 1;
+    }
+    
+    
+}
+
+.footer__socials-icon {
+    width: 23px;
+    height: 23px;
+    
+    
 }

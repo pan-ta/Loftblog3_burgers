@@ -12,6 +12,9 @@
 .form__row {
     display: flex;
     margin-bottom: 20px;
+    &_margsmall {
+        margin-bottom: 14px;
+    }
 }
 
 .form__block {
@@ -28,8 +31,14 @@
     height: 30px;
     border-radius: 4px;
     border: none;
-    transition: 0.3s;
     outline: none;
+    padding: 10px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.42;
+
+    transition: 0.3s;
     &:focus {
         border: 2px solid $orange;
     }
@@ -39,8 +48,12 @@
 .form__input--bigtext {
     height: 110px;
     resize: none;
+    
 
 }
+
+
+
 
 .form__title {
     margin-bottom: 7px;
@@ -97,15 +110,17 @@
 
 
 .form__checkbox:checked + .form__checkbox-stylized::before {
-	content: "";
+// 	content: <svg class="godown-btn__icon icon icon_color_white">
+//     <use xlink: href="img/sprite/sprite.svg#checkbox" />
+// </svg>";
 	display: block;
 	position: absolute;
 	top: 4px;
 	right: 4px;
 	bottom: 4px;
 	left: 4px;
-	background: $red;
-    border-radius: 50%;
+	// background: $red;
+    // border-radius: 50%;
     
 }
 

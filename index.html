@@ -55,7 +55,7 @@
                                 <img src="img/burgers/burger_top.png" class="head__pic-img" alt="бургер">
                             </div>
                             <div class="head__desc">
-                                <h1 class="section-title">Мы делаем</h1>
+                                <h1 class="section-title section-title_marg_small">Мы делаем</h1>
                                 <div class="head__desc-text">натуральные бургеры</div>
                             </div>
                         </div>
@@ -64,12 +64,12 @@
            </section>
            <section class="section about">
                <div class="container container__content-in-center">
-                   <h1 class="section-title section-title_color_black">Мы лучшие</h1>
+                   <h1 class="section-title section-title_color_black ">Мы лучшие</h1>
                    <ul class="about__list">
                        <li class="about__item">
                            <div class="about__pic">
                                <svg class="about__icon icon icon_color_red">
-                                   <use xlink: href="img/sprite/sprite.svg/#meat" />
+                                   <use xlink: href="img/sprite/sprite.svg#meat" />
                                </svg>
                            </div>
                            <div class="about__text">
@@ -81,7 +81,9 @@
                        </li>
                        <li class="about__item">
                             <div class="about__pic">
-                                <img src="img/about_icons/hand.png" alt="иконка">
+                                <svg class="about__icon icon icon_color_orange">
+                                   <use xlink: href="img/sprite/sprite.svg#hand" />
+                               </svg>
                             </div>
                             <div class="about__text">
                                 <div class="about__text-title">Ручная сборка</div>
@@ -92,7 +94,9 @@
                         </li>
                         <li class="about__item">
                             <div class="about__pic">
-                                <img src="img/about_icons/natural.png" alt="иконка">
+                                <svg class="about__icon icon icon_color_green">
+                                   <use xlink: href="img/sprite/sprite.svg#natural" />
+                               </svg>
                             </div>
                             <div class="about__text">
                                 <div class="about__text-title">Натуральные ингредиенты</div>
@@ -174,20 +178,32 @@
                    <div class="menu__content">
                        <h1 class="section-title section-title_color_white menu__section-title">Меню</h1>
                        <ul class="menu__acco-list">
-                           <li class="menu__acco-item">
-                               <div class="menu__acco-pic" style="background-image: url(img/menu-acco/menu-acco1.jpg)"></div>
-                               <div class="menu__acco-content">
-                                   <div class="menu__acco-link">
-                                        <a href="" class="menu__acco-title">Для мясоедов</a>
-                                   </div>
-                                   <div class="menu__acco-desc">
-                                        <p>Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр.</p>
-                                        <p>Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.</p>   
-                                    </div>
-                               </div>
+                           <li class="menu__acco-item menu__acco-item_active">
+                                <a href="" class="menu__acco-trigger">
+                                    <div class="menu__acco-pic" style="background-image: url(img/menu-acco/menu-acco1.jpg)"></div>
+                                    <div class="menu__acco-title">Для мясоедов</div>
+                                </a>
+                                <div class="menu__acco-content">
+                                    <p>Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр.</p>
+                                </div>
                            </li>
-                            
-                               </div>
+                           <li class="menu__acco-item">
+                                <a href="" class="menu__acco-trigger">
+                                    <div class="menu__acco-pic" style="background-image: url(img/menu-acco/menu-acco2.jpg)"></div>
+                                    <div class="menu__acco-title">Вегетарианское</div>
+                                </a>
+                                <div class="menu__acco-content">
+                                    <p>Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр.</p>
+                                </div>
+                           </li>  
+                           <li class="menu__acco-item">
+                                <a href="" class="menu__acco-trigger">
+                                    <div class="menu__acco-pic" style="background-image: url(img/menu-acco/menu-acco3.jpg)"></div>
+                                    <div class="menu__acco-title">Диетическое</div>
+                                </a>
+                                <div class="menu__acco-content">
+                                    <p>Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр.</p>
+                                </div>
                            </li>    
                        </ul>
                    </div>
@@ -327,13 +343,13 @@
                                 </div>
                            </div>
                            <div class="form__column">
-                               <div class="form__row">
+                               <div class="form__row form__row_margsmall">
                                     <label class="form__block">
                                          <div class="form__title">Комментарий</div>
-                                         <input type="textarea" class="form__input form__input--bigtext">
+                                         <textarea class="form__input form__input--bigtext"></textarea>
                                     </label>
                                 </div>
-                                <div class="form__row">
+                                <div class="form__row form__row_margsmall">
                                     <div class="form__controls">
                                         <label class="form__controls-trigger">
                                             <input type="radio" name="photo" class="form__radio">
@@ -391,7 +407,9 @@
                 </li>
             </ul>
             <a href="" class="godown-btn">
-                <img src="img/arrow-scroll.png" alt="стрелочка">
+                <svg class="godown-btn__icon icon icon_color_white">
+                    <use xlink: href="img/sprite/sprite.svg#arrow-scroll" />
+                </svg>
             </a>
         </main>
     </div>
@@ -401,31 +419,39 @@
                 <address class="footer__contacts">
                     <div class="footer__address">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</div>
                     <div class="footer__phone">
-                        <div class="footer__phone-icon">
-                            <!-- svg -->
-                        </div>
+                        <svg class="footer__phone-icon icon icon_color_red">
+                            <use xlink: href="img/sprite/sprite.svg#phone" />
+                        </svg>
                         <a href="tel:+78123771377" class="footer__phone-link">+7 (812) 377-13-77</a>
                     </div>
                 </address>
                 <ul class="footer__socials-list">
                     <li class="footer__socials-item">
                         <a href="" class="footer__socials-link">
-                            <!-- svg -->
+                            <svg class="footer__socials-icon icon icon_color_white">
+                                <use xlink: href="img/sprite/sprite.svg#vk" />
+                            </svg>
                         </a>
                     </li>
                     <li class="footer__socials-item">
                         <a href="" class="footer__socials-link">
-                            <!-- svg -->
+                            <svg class="footer__socials-icon icon icon_color_white">
+                                <use xlink: href="img/sprite/sprite.svg#fb" />
+                            </svg>
                         </a>
                     </li>
                     <li class="footer__socials-item">
                         <a href="" class="footer__socials-link">
-                            <!-- svg -->
+                            <svg class="footer__socials-icon icon icon_color_white">
+                                <use xlink: href="img/sprite/sprite.svg#inst" />
+                            </svg>
                         </a>
                     </li>
                     <li class="footer__socials-item">
                         <a href="" class="footer__socials-link">
-                            <!-- svg -->
+                            <svg class="footer__socials-icon icon icon_color_white">
+                                <use xlink: href="img/sprite/sprite.svg#twitter" />
+                            </svg>
                         </a>
                     </li>
                 </ul>

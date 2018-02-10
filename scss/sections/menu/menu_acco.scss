@@ -15,8 +15,19 @@ $trigger-width: 80px;
     min-height: 650px;
     background-color: rgba($black, 0.93);
     display: flex;
+    transition: 300ms;
     
-    &_active {
+    // &_active {
+    //     width: 50vw;
+        
+    //     .menu__acco-title {
+    //         color: $orange;
+    //     }
+    //     .menu__acco-content {
+    //         display: initial;
+    //     }
+    // }
+    &:hover {
         width: 50vw;
         .menu__acco-title {
             color: $orange;

@@ -81,6 +81,7 @@
     width: 17px;
     height: 17px;
     position: relative;
+    cursor: pointer;
 }
 
 .form__radio:checked + .form__radio-stylized::before {
@@ -106,21 +107,22 @@
     background: #fff;
     width: 17px;
     height: 17px;
+    cursor: pointer;
 }
 
 
 .form__checkbox:checked + .form__checkbox-stylized::before {
-// 	content: <svg class="godown-btn__icon icon icon_color_white">
-//     <use xlink: href="img/sprite/sprite.svg#checkbox" />
-// </svg>";
-	display: block;
-	position: absolute;
-	top: 4px;
-	right: 4px;
-	bottom: 4px;
-	left: 4px;
-	// background: $red;
-    // border-radius: 50%;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: url(../img/add-icons/checkbox.svg); 
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
     
 }
 

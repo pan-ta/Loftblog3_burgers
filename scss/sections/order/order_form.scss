@@ -1,12 +1,19 @@
 .form {
     display: flex;
     justify-content: space-between;
+    @include tablets {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .form__column {
     display: flex;
     flex-direction: column;
     width: 49%;
+    @include phones {
+        width: 90%;
+    }
 }
 
 .form__row {
@@ -16,6 +23,13 @@
         margin-bottom: rem(14px);
     }
 }
+
+.form__row_center {
+    @include phones {
+        justify-content: center;
+    }
+}
+
 
 .form__block {
     display: block;

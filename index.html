@@ -9,6 +9,7 @@
         <![endif]-->
     <!-- РАЗОБРАТЬСЯ с комментированием! -->
     <title>MR BURGER</title>
+    <script src="js/scripts.js"></script>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
@@ -47,6 +48,45 @@
                                 </ul>
                             </nav>
                             <a href="" class="button order-btn">Заказать</a> 
+                            <nav class="hamburger">
+                                <a href="" class="hamburger__button">
+                                    <svg class="hamburger__icon icon icon_color_white">
+                                        <use xlink: href="img/sprite/sprite.svg#hamburger" />
+                                    </svg>
+                                </a>
+                                <div class="hamburger__overlay">
+                                    <div class="hamburger__content">
+                                        <a href="" class="logo hamburger__logo">
+                                            <img src="img/logos/logo.svg" alt="лого">
+                                        </a>
+                                        <ul class="hamburger__list">
+                                            <li class="hamburger__item">
+                                                <a href="" class="hamburger__link">О нас</a>
+                                            </li>
+                                            <li class="hamburger__item">
+                                                <a href="" class="hamburger__link">Бургеры</a>
+                                            </li>
+                                            <li class="hamburger__item">
+                                                <a href="" class="hamburger__link">Команда</a>
+                                            </li>
+                                            <li class="hamburger__item">
+                                                <a href="" class="hamburger__link">Меню</a>
+                                            </li>
+                                            <li class="hamburger__item">
+                                                <a href="" class="hamburger__link">Отзывы</a>
+                                            </li>
+                                            <li class="hamburger__item">
+                                                <a href="" class="hamburger__link">Контакты</a>
+                                            </li>
+                                        </ul>
+                                        <a href="" class="hamburger__close">
+                                            <svg class="hamburger__close-icon icon icon_color_white">
+                                                <use xlink: href="img/sprite/sprite.svg#close" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </nav>
                         </div>
                    </header>
                    <div class="container__content-in-center">
@@ -355,7 +395,7 @@
                                          <textarea class="form__input form__input--bigtext"></textarea>
                                     </label>
                                 </div>
-                                <div class="form__row form__row_margsmall">
+                                <div class="form__row form__row_margsmall form__row_center">
                                     <div class="form__controls">
                                         <label class="form__controls-trigger">
                                             <input type="radio" name="photo" class="form__radio">
@@ -369,14 +409,14 @@
                                         </label>
                                     </div>
                                 </div>
-                                <div class="form__row">
+                                <div class="form__row form__row_center">
                                     <label class="form__ckeckbox-trigger">
                                          <input type="checkbox" class="form__checkbox" checked>
                                          <span class="form__checkbox-stylized"></span>
                                          <div class="form__title">Не перезванивать</div>
                                     </label>
                                 </div>
-                                <div class="form__row submit-row">
+                                <div class="form__row submit-row form__row_center">
                                     <button class="form__submit button" type="submit">Заказать</button>
                                     <button class="form__clear" type="clear">Очистить</button>
                                 </div>

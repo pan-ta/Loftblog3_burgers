@@ -2,8 +2,6 @@
     position: relative;
     // зачем всегда позишн релатив на враппер?
     width: 100%;
-    // min-width: 940px + 20px; 
-    // ??
     min-height: 100%;
     overflow: hidden;
     // чтобы не было гориз скрола
@@ -17,11 +15,11 @@
   }
 
 .container {
-    width: 940px;
+    max-width: 940px;
+    width: 95%;
     height: 100%;
     margin: 0 auto;
-    padding: 1%  0;
-    //или как сделать отступ от верха?? или вообще не тут? % vh px что лучше?
+    padding: 2%  0;
     display: flex;
     flex-direction: column;
     
@@ -69,11 +67,15 @@
             color: #fff;
         }
     }
+    @include phones {
+        font-size: 50px;
+        line-height: 1.2;
+    }
 }
 
 .fixed-menu {
     position: fixed;
-    top: rem(20px);
+    top: rem(80px);
     right: rem(20px);
 }
 

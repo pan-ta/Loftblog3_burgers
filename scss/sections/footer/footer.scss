@@ -17,6 +17,9 @@
 .footer__contacts {
     font-style: normal;
     text-decoration: none;
+    @include phones {
+        max-width: 43%;
+    }
 }
 
 .footer__address {

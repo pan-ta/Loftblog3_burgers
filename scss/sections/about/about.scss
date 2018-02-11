@@ -7,6 +7,10 @@
     display: flex;
     justify-content: space-between;
     margin-top: rem(10px);
+    @include phones {
+        flex-direction: column;
+
+    }
 
 }
 
@@ -15,14 +19,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include phones {
+        flex-direction: row;
+        width: 90%;
+        margin-bottom: 30px;
+    }
 }
 
 .about__pic {
     margin-bottom: rem(30px);
+    @include phones {
+        margin: 10px;
+    }
 }
 
 .about__icon {
     height: rem(80px);
+    width: rem(100px);
     
 }
 
@@ -32,6 +45,10 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    @include phones {
+        align-items: flex-start;
+        text-align: left;
+    }
 }
 
 .about__text-title {

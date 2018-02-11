@@ -7,24 +7,48 @@
     
     display: flex;
     align-items: center;
-    
+    @include tablets {
+        flex-direction: column;
+        text-align: center;
+        
     }
+    
+}
 
 .head__pic {
     margin-top: -10%;
     margin-right: 3%;
-    // width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include phones {
+        width: 70%;
+    }
 }
 
 .head__pic-img {
-    // max-width: 100%;
-    // так ограничила картинку??
+    @include phones {
+        width: 75vmin;
+    }
 }
 
-
+.head__desc {
+    .section-title {
+        @include phones {
+            margin-top: 30px;
+        }
+    }
+}
 
 .head__desc-text {
     font-family: "Lifehack";
     font-size: rem(65px);
     line-height: 0.9;
+    @include tablets {
+        max-width: 70vw;
+        text-align: center;
+    }
+    @include phones {
+        font-size: 45px;
+    }
 }

@@ -5,7 +5,7 @@
 }
 
 .logo {
-    width: 130px;
+    width: rem(130px);
 
 }
 
@@ -18,7 +18,7 @@
 .nav__list {
     display: flex;
     align-items: center;
-    margin-right: 20px;
+    margin-right: rem(20px);
 }
 
 .nav__item {
@@ -27,11 +27,11 @@
     &:before {
         content: "";
         display: block;
-        width: 4px;
-        height: 4px;
+        width: rem(4px);
+        height: rem(4px);
         border-radius: 50%;
         background: #fff;
-        margin: 0 15px;
+        margin: 0 rem(15px);
     }
     &:first-child {
         &:before {
@@ -42,7 +42,7 @@
 
 .nav__link {
     color: #fff;
-    font-size: 13px;
+    font-size: rem(13px);
     text-transform: uppercase;
     text-decoration: none;
     &:hover {

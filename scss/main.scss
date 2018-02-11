@@ -1,12 +1,19 @@
+//resolutions
+$tablets: 768px;
+$phones: 480px;
+@import "layout/media.scss";
+
 // config
 @import "config/mixins.scss";
 @import "config/variables.scss";
+@import "config/func.scss";
 
 // layout
 
 @import "layout/base.scss";
 @import "layout/ajustments.scss";
 @import "layout/fonts.scss";
+
 
 //sections/common
 

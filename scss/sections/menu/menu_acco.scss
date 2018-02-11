@@ -6,7 +6,7 @@
 
 }
 
-$trigger-width: 80px;
+$trigger-width: rem(80px);
 
 
 .menu__acco-item {
@@ -70,15 +70,15 @@ $trigger-width: 80px;
 
 .menu__acco-title {
     font-family: Gagalin;
-    font-size: 40px;
+    font-size: rem(40px);
     color: #fff;
     position: absolute;
     display: block;
     transform: rotate(-90deg);
     transform-origin: left top;
     width: 70vh;
-    padding-top: 10px;
-    padding-left: 35px;
+    padding-top: rem(10px);
+    padding-left: rem(35px);
     
     
     
@@ -87,8 +87,8 @@ $trigger-width: 80px;
 
 .menu__acco-content {
     flex: 1;
-    padding-top: 50px;
-    padding-left: 30px;
-    padding-right: 50px;
+    padding-top: rem(50px);
+    padding-left: rem(30px);
+    padding-right: rem(50px);
     display: none;
 }

@@ -11,24 +11,12 @@ $trigger-width: 80px;
 
 .menu__acco-item {
     width: $trigger-width;
-    height: 100vh;
-    min-height: 650px;
-    background-color: rgba($black, 0.93);
-    display: flex;
+    overflow: hidden;
     transition: 300ms;
     
-    // &_active {
-    //     width: 50vw;
-        
-    //     .menu__acco-title {
-    //         color: $orange;
-    //     }
-    //     .menu__acco-content {
-    //         display: initial;
-    //     }
-    // }
-    &:hover {
+    &_active {
         width: 50vw;
+        
         .menu__acco-title {
             color: $orange;
         }
@@ -36,9 +24,25 @@ $trigger-width: 80px;
             display: initial;
         }
     }
+    // &:hover {
+    //     width: 50vw;
+    //     .menu__acco-title {
+    //         color: $orange;
+    //     }
+    //     .menu__acco-content {
+    //         display: initial;
+    //     }
+    // }
 
 }
-
+.menu__acco-itemcontent {
+    width: 50vw;
+    height: 100vh;
+    min-height: 650px;
+    background-color: rgba($black, 0.93);
+    display: flex;
+    
+}
 
 
 .menu__acco-trigger {

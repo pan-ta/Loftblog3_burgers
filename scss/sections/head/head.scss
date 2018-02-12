@@ -45,7 +45,7 @@
     font-size: rem(65px);
     line-height: 0.9;
     @include tablets {
-        max-width: 70vw;
+        
         text-align: center;
     }
     @include phones {

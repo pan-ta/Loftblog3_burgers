@@ -12,13 +12,18 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include phones {
+        flex-direction: column;
+    }
 }
 
 .footer__contacts {
     font-style: normal;
     text-decoration: none;
     @include phones {
-        max-width: 43%;
+        text-align: center;
+        margin-bottom: 10px;
+        margin-top: 10px;
     }
 }
 
@@ -44,10 +49,18 @@
 .footer__socials-list {
     display: flex;
     align-items: center;
+    @include phones {
+        margin-bottom: 10px;
+    }
 }
 
 .footer__socials-item {
     margin-left: rem(22px);
+    @include phones {
+        &:first-child {
+            margin-left: 0;
+        }
+    }
 }
 
 .footer__socials-link {

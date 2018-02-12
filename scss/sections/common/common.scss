@@ -81,26 +81,40 @@
 
 .fixed-menu__link {
     
-    width: rem(17px);
-    height: rem(17px);
+    width: 18px;
+    height: 18px;
     border-radius: 50%;
     border: 1px #fff solid;
-    margin-bottom: rem(8px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin-bottom: 8px;
+    display: block;
+    position: relative;
+    @include phones {
+        width: 14px;
+        height: 14px;
+
+    }
     
 }
 
 .fixed-menu__link--active {
     &:before {
         content: "";
-        width: rem(7px);
-        height: rem(7px);
+        width: 6px;
+        height: 6px;
         background: #fff;
         border-radius: 50%;
         display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
 
+    }
+    @include phones {
+        &:before {
+            width: 4px;
+            height: 4px;
+        }
     }
 }
 
@@ -108,7 +122,8 @@
 .godown-btn {
     position: fixed;
     bottom: rem(15px);
-    right: 50%; //как сделать по центру на позишн фиксд? 
+    right: 50%; 
+    transform: translate(50%, 0);
 }
 
 .godown-btn__icon {

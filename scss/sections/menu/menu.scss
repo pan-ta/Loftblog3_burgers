@@ -7,10 +7,12 @@
     position: relative;
     display: flex;
     justify-content: flex-end;
+    z-index: 100;
 }
 
 .menu__section-title {
     position: absolute;
     top: 10vh;
     left: 8vw;
+    
 }

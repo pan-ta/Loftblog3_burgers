@@ -55,7 +55,7 @@
                                     </svg>
                                 </a>
                                 <div class="hamburger__overlay">
-                                    <div class="hamburger__content">
+                                    <div class="overlay-container">
                                         <a href="" class="logo hamburger__logo">
                                             <img src="img/logos/logo.svg" alt="лого">
                                         </a>
@@ -218,9 +218,9 @@
                    <div class="menu__content">
                        <h1 class="section-title section-title_color_white menu__section-title">Меню</h1>
                        <ul class="menu__acco-list">
-                           <li class="menu__acco-item menu__acco-item_active">
+                           <li class="menu__acco-item menu__acco-item_active" id="item1">
                                <div class="menu__acco-itemcontent">
-                                    <a href="" class="menu__acco-trigger">
+                                    <a href="" class="menu__acco-trigger" id="trigger1">
                                         <div class="menu__acco-pic" style="background-image: url(img/menu-acco/menu-acco1.jpg)"></div>
                                         <div class="menu__acco-title">Для мясоедов</div>
                                     </a>
@@ -229,7 +229,7 @@
                                     </div>
                                </div>
                            </li>
-                           <li class="menu__acco-item">
+                           <li class="menu__acco-item ">
                                 <div class="menu__acco-itemcontent">
                                      <a href="" class="menu__acco-trigger">
                                          <div class="menu__acco-pic" style="background-image: url(img/menu-acco/menu-acco2.jpg)"></div>
@@ -267,6 +267,7 @@
                             </div>
                             <a href="" class="button details-btn">Подробнее</a>
                         </div>
+                        
                    </li>
                    <li class="reviews__item" style="background-image: url(img/reviews_pics/rev-2.jpg)">
                         <div class="reviews__hover">
@@ -346,6 +347,21 @@
                         </div>
                     </li>
                </ul>
+               <div class="reviews__overlay">
+                    <div class="overlay-container overlay-container_transp">
+                        <div class="reviews__popup popup">
+                            <div class="reviews__popup-title">Тут будет заголовок из js</div>
+                            <div class="reviews__popup-desc">
+                                <p>Тут будет описание из js Тут будет описание из js Тут будет описание из js Тут будет описание из js Тут будет описание из js Тут будет описание из js Тут будет описание из js Тут будет описание из js Тут будет описание из js Тут будет описание из js Тут будет описание из js </p>
+                            </div>
+                            <a href="" class="popup__close">
+                                <svg class="popup__close-icon icon icon_color_red">
+                                    <use xlink: href="img/sprite/sprite.svg#close" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
            </section>
            <section class="section order">
                <div class="order__container container container__content-in-center">

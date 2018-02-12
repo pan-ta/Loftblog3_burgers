@@ -1,22 +1,20 @@
 .menu__acco-list {
     display: flex;
     
-
-    
-
 }
 
-$trigger-width: rem(80px);
+
 
 
 .menu__acco-item {
-    width: $trigger-width;
+    width: 7vw;
+    max-width: 80px;
     overflow: hidden;
     transition: 300ms;
-    
+
     &_active {
         width: 50vw;
-        
+        max-width: initial;
         .menu__acco-title {
             color: $orange;
         }
@@ -24,6 +22,23 @@ $trigger-width: rem(80px);
             display: initial;
         }
         
+    }
+
+    @include tablets {
+        width: 11vw;
+        &_active {
+        width: 78vw;
+        }
+    }
+    @include phones {
+        width: 20vw;
+        &_active {
+        width: 100vw;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        }
     }
     // &:hover {
     //     width: 50vw;
@@ -40,6 +55,12 @@ $trigger-width: rem(80px);
 }
 .menu__acco-itemcontent {
     width: 50vw;
+    @include tablets {
+        width: 78vw;
+    }
+    @include phones {
+        width: 100vw;
+    }
     height: 100vh;
     min-height: 650px;
     background-color: rgba($black, 0.93);
@@ -49,9 +70,16 @@ $trigger-width: rem(80px);
 
 
 .menu__acco-trigger {
-    width: $trigger-width;
-    position: relative;
+    width: 7vw;
+    max-width: 80px;
     background-color: rgba(#000, 0.93);
+    text-decoration: none;
+    @include tablets {
+        width: 11vw;
+    }
+    @include phones {
+        width: 20vw;
+    }
 }
 
 
@@ -70,17 +98,17 @@ $trigger-width: rem(80px);
 
 
 
-
 .menu__acco-title {
     font-family: Gagalin;
     font-size: rem(40px);
     color: #fff;
-    position: absolute;
+    text-decoration: none;
+    
     display: block;
     transform: rotate(-90deg);
     transform-origin: left top;
     width: 70vh;
-    padding-top: rem(10px);
+    padding-top: 5%;
     padding-left: rem(35px);
     
     

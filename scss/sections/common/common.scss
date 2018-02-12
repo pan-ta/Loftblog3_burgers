@@ -152,3 +152,31 @@
         }
     }
 }
+
+.overlay-container{
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 90;
+    
+    background-color: $black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &_transp {
+        background-color: rgba($black, 0.9);
+    }
+}
+
+.popup {
+    background-color: #fff;
+    width: 30%;
+    height: auto;
+    padding: 2%;
+    border-radius: rem(5px);
+}

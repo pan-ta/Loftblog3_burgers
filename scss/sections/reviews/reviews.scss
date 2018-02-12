@@ -17,7 +17,6 @@
         width: 50%;
         height: 25%;
     }
-    
 }
 
 
@@ -67,4 +66,34 @@
     @include phones {
         display: none;
     }
+}
+
+.reviews__overlay {
+    display: none;
+
+}
+
+.reviews__popup {
+    color: $black;
+    position: relative;
+    
+}
+
+.popup__close-icon {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 3vh;
+    right: 3vh;
+}
+
+
+.reviews__popup-title {
+    font-family: Gagalin;
+    margin-bottom: rem(18px);
+}
+
+.reviews__popup-desc {
+    font-size: rem(15px);
+    margin-bottom: rem(15px);
 }

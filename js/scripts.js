@@ -31,6 +31,11 @@ window.onload = function(){
         menuAccoItemContainer.classList.remove(".menu__acco-item_active");
     })
 
+
+    ////////////////////////////
+    // reviews popup
+
+    
 }
 
 

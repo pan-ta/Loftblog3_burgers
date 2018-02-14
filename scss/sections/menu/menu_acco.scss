@@ -1,5 +1,6 @@
 .menu__acco-list {
     display: flex;
+    position: absolute;
     
 }
 
@@ -7,8 +8,7 @@
 
 
 .menu__acco-item {
-    width: 7vw;
-    max-width: 80px;
+    width: 80px;
     overflow: hidden;
     transition: 300ms;
 
@@ -25,13 +25,13 @@
     }
 
     @include tablets {
-        width: 11vw;
+        
         &_active {
         width: 78vw;
         }
     }
     @include phones {
-        width: 20vw;
+        
         &_active {
         width: 100vw;
         position: absolute;
@@ -40,15 +40,7 @@
         z-index: 10;
         }
     }
-    // &:hover {
-    //     width: 50vw;
-    //     .menu__acco-title {
-    //         color: $orange;
-    //     }
-    //     .menu__acco-content {
-    //         display: initial;
-    //     }
-    // }
+   
     
     
 
@@ -70,16 +62,10 @@
 
 
 .menu__acco-trigger {
-    width: 7vw;
-    max-width: 80px;
+    width: 80px;
     background-color: rgba(#000, 0.93);
     text-decoration: none;
-    @include tablets {
-        width: 11vw;
-    }
-    @include phones {
-        width: 20vw;
-    }
+    
 }
 
 
@@ -107,8 +93,8 @@
     display: block;
     transform: rotate(-90deg);
     transform-origin: left top;
-    width: 70vh;
-    padding-top: 5%;
+    width: 80vh;
+    padding-top: 7px;
     padding-left: rem(35px);
     
     

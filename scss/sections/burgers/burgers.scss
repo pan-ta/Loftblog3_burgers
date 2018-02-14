@@ -1,6 +1,7 @@
 .burgers {
-    background: url("../img/bg/bg-burgers.jpg") center center no-repeat;
-    background-size: cover;
+    // background: url("../img/bg/bg-burgers.jpg") center center no-repeat;
+    // background-size: cover;
+    background: linear-gradient(to top, $orange, #eb8c38, $orange);
     position: relative;
 }
 
@@ -9,6 +10,22 @@
     align-items: center;
     justify-content: center;
     
+}
+
+.burgers__content {
+    width: 100vw;
+    // height: auto;
+    overflow: hidden; //как сделать, чтоб не скрывал по высоте?? убрать совсем??
+}
+
+.burgers__list {
+    display: flex;
+    
+}
+
+.burgers__item {
+    width: 80vw;
+    margin: 0 10vw;
 }
 
 .burgers__item-content {
@@ -126,7 +143,7 @@
 
 }
 
-.burgers__ingredients-link {
+.burgers__ingredients-button {
     
     background: rgba($red, 0.5);
     display: flex;
@@ -153,7 +170,7 @@
 }
 
 .burgers__ingredients-content {
-    // visibility: hidden;
+    
     background: rgba(#fff, 0.9);
     border-radius: rem(5px);
     padding: rem(20px);
@@ -246,9 +263,7 @@
 
 }
 
-.slider-controls__icon {
-    height: 5vh;
-    width: 5vh;
+.burgers__slider-controlslink {
     &:first-child {
         transform: rotate(90deg);
 
@@ -257,4 +272,10 @@
         transform: rotate(-90deg);
         
     }
+}
+
+.slider-controls__icon {
+    height: 5vh;
+    width: 5vh;
+    
 }

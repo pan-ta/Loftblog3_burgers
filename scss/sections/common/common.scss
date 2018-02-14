@@ -162,7 +162,7 @@
     bottom: 0;
     height: 100vh;
     width: 100vw;
-    z-index: 90;
+    z-index: 150;
     
     background-color: $black;
     display: flex;
@@ -174,9 +174,40 @@
 }
 
 .popup {
+    display: none;
+}
+
+.popup__content {
     background-color: #fff;
     width: 30%;
     height: auto;
     padding: 2%;
     border-radius: rem(5px);
+    position: relative;
+}
+
+.popup__text {
+    color: $black;
+}
+
+.popup__title {
+    font-family: Gagalin;
+    margin-bottom: rem(18px);
+}
+
+.popup__desc {
+    font-size: rem(15px);
+    margin-bottom: rem(15px);
+}
+
+.popup__close-icon {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 3vh;
+    right: 3vh;
+}
+
+.invisible {
+    visibility: hidden;
 }

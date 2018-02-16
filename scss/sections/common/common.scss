@@ -184,6 +184,12 @@
     padding: 2%;
     border-radius: rem(5px);
     position: relative;
+    @include tablets {
+        width: 70%;
+    }
+    @include phones {
+        width: 90%;
+    }
 }
 
 .popup__text {
@@ -210,4 +216,8 @@
 
 .invisible {
     visibility: hidden;
+}
+
+.hidden {
+    display: none;
 }

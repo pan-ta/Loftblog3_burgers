@@ -15,38 +15,42 @@
         border-top-color: $orange;
         border-bottom-width: 0;
         margin-right: rem(20px);
-
     }
-    &:hover {
-        color: $orange;
-        
-        &:before {
-            transform: rotate(180deg);
-        }
-        
-    }
-   
-    
 }
+
 
 .team__acco-content {
     display: flex;
     align-items: top;
     height: 0;
     overflow: hidden;
+    transition: 300ms;
+    // display: none;
     @include tablets {
         flex-direction: column;
         align-items: center;
     }
-    
-    
-    
-    
-    
+  
 }
-.team__acco-content--active{
-    height: 100%;
+
+.team__acco-item {
+    margin-bottom: rem(30px);
+    &_active {
+        .team__acco-title {
+            color: $orange;
+            &:before {
+                transform: rotate(180deg);
+            }
+        }
+        .team__acco-content {
+            height: 120px;
+            @include tablets {
+                height: 220px;
+            }
+        }
+    }
 }
+
 
 .team__acco-pic {
     width: 100px ;
@@ -57,6 +61,7 @@
     margin-top: rem(15px);
     margin-left: rem(30px);
     margin-right: rem(15px);
+    
     @include tablets {
         margin-right: 0;
         margin-left: 0;
@@ -69,7 +74,7 @@
     flex: 1;
     @include tablets {
         margin-left: 0;
-        width: 60%;
+        width: 80%;
     }
 }
 
@@ -79,17 +84,4 @@
     margin-top: rem(15px);
     
     
-}
-
-.team__acco-item {
-    margin-bottom: rem(30px);
-}
-
-.team__acco-item--active .team__acco-title {
-    color: $orange;
-        
-        &:before {
-            transform: rotate(180deg);
-        }
-
 }

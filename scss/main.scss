@@ -30,6 +30,9 @@ $phones: 480px;
 
 //sections/burgers
 @import "sections/burgers/burgers.scss";
+@import "sections/burgers/burgers_ingredients.scss";
+@import "sections/burgers/burgers_ccal.scss";
+
 
 //sections/team
 @import "sections/team/team.scss";

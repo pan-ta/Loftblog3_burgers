@@ -1,0 +1,81 @@
+.burgers__ingredients {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+
+}
+
+.burgers__ingredients-button {
+    
+    background: rgba($red, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: rem(90px);
+    width: rem(90px);
+    border-radius: rem(5px);
+    text-decoration: none;
+}
+
+.burgers__ingredients-mainicon {
+    width: rem(45px);
+    height: rem(45px);
+}
+
+.burgers__ingredients-title {
+    color: #fff;
+    font-family: "Gagalin";
+    font-size: rem(14px);
+    text-decoration: none;
+
+}
+
+.burgers__ingredients-content {
+    
+    background: rgba(#fff, 0.9);
+    border-radius: rem(5px);
+    padding: rem(20px);
+    
+}
+
+.burgers__ingredients-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.burgers__ingredients-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: rem(240px);
+    color: $black;
+    margin-bottom: rem(15px);
+    &:last-child {
+        margin-bottom: 0;
+    }
+    @include phones {
+        width:70vw;
+    }
+}
+
+.burgers__ingredients-pic {
+    margin-right: rem(15px);
+    
+}
+
+.burgers__ingredients-icon {
+    width: rem(50px);
+    height: rem(40px);
+}
+
+.burgers__ingrediets-name {
+    font-weight: 500;
+    margin-right: rem(15px);
+    flex: 1;
+}
+
+.burgers__ingredients-gramm {
+    margin-left: auto;
+}

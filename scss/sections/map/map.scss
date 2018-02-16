@@ -1,4 +1,20 @@
 .map {
-    background: url("../img/map.jpg") center center no-repeat;
-    background-size: cover;
+    // background: url("../img/map.jpg") center center no-repeat;
+    // background-size: cover;
+    color: $black;
+}
+
+.map__hint {
+    font-family: Gagalin;
+    
+}
+
+.map__balloon-title {
+    font-family: Gagalin;
+    margin-top: rem(6px);
+    
+}
+
+.map__balloon-desc {
+    font-size: rem(15px);
 }

@@ -1,6 +1,6 @@
 .menu__acco-list {
     display: flex;
-    position: absolute;
+    // position: absolute;
     
 }
 
@@ -27,7 +27,7 @@
     @include tablets {
         
         &_active {
-        width: 78vw;
+        width: calc(100vw - 160px);
         }
     }
     @include phones {
@@ -48,7 +48,7 @@
 .menu__acco-itemcontent {
     width: 50vw;
     @include tablets {
-        width: 78vw;
+        width: calc(100vw - 160px);
     }
     @include phones {
         width: 100vw;

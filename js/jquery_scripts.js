@@ -83,29 +83,47 @@ $(document).ready(function(){
 
     var placemarks = [
         {
-            latitude: 59.97,
-            longitude: 30.31,
-            hintContent: '<div class="map__hint">ул. Литераторов, д. 19</div>',
+            latitude: 60.020363,
+            longitude: 30.321707,
+            hintContent: '<div class="map__hint">пр. Энгельса, 69</div>',
             balloonContent: [
-                '<div class="map__balloon-title">ул. Литераторов, д. 19</div>',
+                '<div class="map__balloon-title">пр. Энгельса, 69</div>',
                 '<div class="map__balloon-desc">Самые вкусные бургеры у нас!</div>'
             ]
         },
         {
-            latitude: 59.94,
-            longitude: 30.25,
-            hintContent: '<div class="map__hint">Малый проспект ВО, д. 64</div>',
+            latitude: 59.948568,
+            longitude: 30.463866,
+            hintContent: '<div class="map__hint">пр. Ударников, 15</div>',
             balloonContent: [
-                '<div class="map__balloon-title">Малый проспект ВО, д. 64</div>',
+                '<div class="map__balloon-title">пр. Ударников, 15</div>',
                 '<div class="map__balloon-desc">Самые вкусные бургеры у нас!</div>'
             ]
         },
         {
-            latitude: 59.93,
-            longitude: 30.34,
-            hintContent: '<div class="map__hint">наб. реки Фонтанки, д. 56</div>',
+            latitude: 59.915697,
+            longitude: 30.483727,
+            hintContent: '<div class="map__hint">пр. Товарищеский, 9</div>',
             balloonContent: [
-                '<div class="map__balloon-title">наб. реки Фонтанки, д. 56</div>',
+                '<div class="map__balloon-title">пр. Товарищеский, 9</div>',
+                '<div class="map__balloon-desc">Самые вкусные бургеры у нас!</div>'
+            ]
+        },
+        {
+            latitude: 60.031634,
+            longitude: 30.236637,
+            hintContent: '<div class="map__hint">пр. Комендантский, 53/3</div>',
+            balloonContent: [
+                '<div class="map__balloon-title">пр. Комендантский, 53/3</div>',
+                '<div class="map__balloon-desc">Самые вкусные бургеры у нас!</div>'
+            ]
+        },
+        {
+            latitude: 60.015062,
+            longitude: 30.332442,
+            hintContent: '<div class="map__hint">ул. Дрезденская, 20</div>',
+            balloonContent: [
+                '<div class="map__balloon-title">ул. Дрезденская, 20</div>',
                 '<div class="map__balloon-desc">Самые вкусные бургеры у нас!</div>'
             ]
         }
@@ -115,8 +133,8 @@ $(document).ready(function(){
 
     function init() {
         var map = new ymaps.Map('map', {
-            center: [59.94, 30.32],
-            zoom: 12,
+            center: [59.96, 30.32],
+            zoom: 11,
             controls: ['zoomControl'],
             behaviors: ['drag']
         });

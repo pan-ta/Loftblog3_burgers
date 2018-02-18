@@ -29,9 +29,7 @@ $(document).ready(function(){
     $(".team__acco-title").on("click", e => {
         e.preventDefault();
         $(e.currentTarget).closest(".team__acco-item").toggleClass("team__acco-item_active");
-        // $(e.currentTarget).closest(".team__acco-item").find(".team__acco-content").slideToggle();
         $(e.currentTarget).closest(".team__acco-item").siblings().removeClass("team__acco-item_active");
-        // $(e.currentTarget).closest(".team__acco-item").siblings().find(".team__acco-content").slideUp();
     })
 
     // acco menu
@@ -75,6 +73,59 @@ $(document).ready(function(){
         $(".popup").css("display", "initial");
 
     })
+
+    ///////////////////////////////////////////
+    // form order
+
+    $('#form-order').on('submit', submitForm);
+
+    function submitForm (ev) {
+        ev.preventDefault();
+        
+        var form = $(ev.target),
+            data = form.serialize(),
+            url = form.attr('action'),
+            type = form.attr('method');
+
+        ajaxForm(form).done(function(msg) {
+            var mes = msg.mes,
+                status = msg.status;
+            
+            
+            if (status === 'OK') {
+                $(".popup").css("display", "initial");
+                popupTitle.text("Успешно!");
+                popupText.text(mes);
+            } else{
+                $(".popup").css("display", "initial");
+                popupTitle.text("Что-то пошло не так:(");
+                popupText.text(mes);
+            }
+
+            
+
+
+
+        }).fail(function(jqXHR, textStatus) {
+            alert("Request failed: " + textStatus);
+        });
+
+    };
+
+    // Универсальная функция для работы с формами
+    var ajaxForm = function (form) {
+        var data = form.serialize(),
+            url = form.attr('action');
+        
+        return $.ajax({
+            type: 'POST',
+            url: url,
+            dataType : 'JSON',
+            data: data
+        })
+    };
+
+
 
     ///////////////////
     // map
@@ -169,6 +220,135 @@ $(document).ready(function(){
         clusterer.add(geoObjects);
     }
 
-})
 
+    /////////////////////////////
+    // one page scroll
+
+
+    const sections = $(".section");
+    const display = $(".main-content");
+    let inScroll = false;
+
+    const mobileDetect = new MobileDetect(window.navigator.userAgent);
+    const isMobile = mobileDetect.mobile();
+
+    
+    
+
+    $(document).on({
+        wheel: e => {
+            const deltaY = e.originalEvent.deltaY;
+            const direction = deltaY > 0 ? "down" : "up";
+
+            scrollToSection(direction);
+        },
+
+        keydown: e => {
+            switch (e.keyCode) {
+            case 40:
+                scrollToSection("down");
+                break;
+
+            case 38:
+                scrollToSection("up");
+                break;
+            }
+        },
+
+        touchmove: e => e.preventDefault()
+
+        // touchstart touchend touchmove 
+    });
+
+
+    const scrollToSection = direction => {
+        const activeSection = sections.filter(".active");
+        const nextSection = activeSection.next();
+        const prevSection = activeSection.prev();
+
+        if (direction === "up" && prevSection.length) {
+            performTransition(prevSection.index());
+        }
+
+        if (direction === "down" && nextSection.length) {
+            performTransition(nextSection.index());
+            
+            if (nextSection.next().length === 0) {
+                $(".godown-btn").css("display", "none"); 
+            }
+
+        }
+
+    }
+
+    const performTransition = sectionEq => {
+        if (inScroll) return;
+
+        sections
+            .eq(sectionEq)
+            .addClass("active")
+            .siblings()
+            .removeClass("active");
+
+        const position = `${sectionEq * -100}%`;
+
+        display.css({
+            transform: `translate(0, ${position})`,
+            "-webkit-transform": `translate(0, ${position})`
+        });
+
+        inScroll = true;
+        setTimeout(() => {
+            inScroll = false;
+            setActiveMenuItem(sectionEq);
+        }, 1300); // продолжительность анимации + 300ms - потому что закончится инерция
+    };
+
+
+
+    //////////////////// кусочек от Танечки :'((
+
+    $(".godown-btn").on("click", e =>{
+        e.preventDefault();
+        scrollToSection("down");
+    })
+
+    
+
+    //////////////////// 
+
+    $('[data-scroll-to]').on('click', e => {
+        e.preventDefault();
+        const target = parseInt($(e.currentTarget).attr('data-scroll-to'));
+        performTransition(target);
+
+    })
+
+
+    const setActiveMenuItem = itemEq => {
+        $('.fixed-menu__item').eq(itemEq).addClass('fixed-menu__item_active').siblings().removeClass('fixed-menu__item_active')
+    } 
+
+
+    if (isMobile) {
+        $(document).swipe({
+          swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+            /**
+             * плагин возвращает фактическое...
+             * ...
+             */
+            const scrollDirection = direction === 'down' ? 'up' : 'down';
+            
+            scrollToSection(scrollDirection);
+          }
+        });
+      }
+
+    
+
+});
+
+
+
+    
 

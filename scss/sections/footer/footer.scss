@@ -1,7 +1,13 @@
-.footer {
+.contacts {
     background: url("../img/bg/bg-order.jpg") center center no-repeat;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
     
+}
+
+.footer {
+    height: auto;
 }
 
 .footer__container {

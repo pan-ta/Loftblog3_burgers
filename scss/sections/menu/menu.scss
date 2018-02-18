@@ -15,4 +15,9 @@
     position: absolute;
     top: 10vh;
     left: 8vw;
+    @include sm_phones {
+        transform: rotate(-90deg);
+        top: 60px;
+        left: -20px;
+    }
 }

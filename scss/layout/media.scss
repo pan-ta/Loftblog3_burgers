@@ -9,3 +9,9 @@
         @content;
     }
 }
+
+@mixin sm_phones {
+    @media screen and (max-width: $sm_phones) {
+        @content;
+    }
+}

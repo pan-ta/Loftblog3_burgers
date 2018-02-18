@@ -93,7 +93,7 @@
     height: 16px;
     position: relative;
     cursor: pointer;
-    // flex: 1;
+    flex: 1 0 auto;
 }
 
 .form__radio:checked + .form__radio-stylized::before {

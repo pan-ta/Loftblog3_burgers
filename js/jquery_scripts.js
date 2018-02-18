@@ -183,8 +183,8 @@ $(document).ready(function(){
     geoObjects= [];
 
     function init() {
-        var map = new ymaps.Map('map', {
-            center: [59.96, 30.32],
+        var myMap = new ymaps.Map('map', {
+            center: [59.96640196, 30.34986664],
             zoom: 11,
             controls: ['zoomControl'],
             behaviors: ['drag']
@@ -198,7 +198,7 @@ $(document).ready(function(){
             },
             {
                 iconLayout: 'default#image',
-                iconImageHref: '../img/map/map-marker.svg',
+                iconImageHref: 'img/map/map-marker.svg',
                 iconImageSize: [46, 57],
                 iconImageOffset: [-23, -57],
                 iconImageClipRect: [[415, 0], [461, 57]]
@@ -208,7 +208,7 @@ $(document).ready(function(){
         var clusterer = new ymaps.Clusterer({
             clusterIcons: [
                 {
-                    href: '../img/map/map-marker.svg',
+                    href: 'img/map/map-marker.svg',
                     size: [46, 57],
                     offset: [-23, -57]
                 }
@@ -216,7 +216,7 @@ $(document).ready(function(){
             clusterIconContentLayout: null
         });
 
-        map.geoObjects.add(clusterer);
+        myMap.geoObjects.add(clusterer);
         clusterer.add(geoObjects);
     }
 

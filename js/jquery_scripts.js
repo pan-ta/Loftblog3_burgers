@@ -21,6 +21,18 @@ $(document).ready(function(){
         $(".burgers__ingredients-content").toggleClass("invisible");
     })
 
+
+    //////////////////////////////////////
+    // slider
+
+    
+    $('.burgers__list').slick({
+        
+    });
+    
+
+
+
     /////////////////////////////
     // acco
 
@@ -77,53 +89,50 @@ $(document).ready(function(){
     ///////////////////////////////////////////
     // form order
 
-    $('#form-order').on('submit', submitForm);
+    // $('#form-order').on('submit', submitForm);
 
-    function submitForm (ev) {
-        ev.preventDefault();
+    // function submitForm (ev) {
+    //     ev.preventDefault();
         
-        var form = $(ev.target),
-            data = form.serialize(),
-            url = form.attr('action'),
-            type = form.attr('method');
+    //     var form = $(ev.target),
+    //         data = form.serialize(),
+    //         url = form.attr('action'),
+    //         type = form.attr('method');
 
-        ajaxForm(form).done(function(msg) {
-            var mes = msg.mes,
-                status = msg.status;
+    //     ajaxForm(form).done(function(msg) {
+    //         var mes = msg.mes,
+    //             status = msg.status;
             
             
-            if (status === 'OK') {
-                $(".popup").css("display", "initial");
-                popupTitle.text("Успешно!");
-                popupText.text(mes);
-            } else{
-                $(".popup").css("display", "initial");
-                popupTitle.text("Что-то пошло не так:(");
-                popupText.text(mes);
-            }
-
-            
+    //         if (status === 'OK') {
+    //             $(".popup").css("display", "initial");
+    //             popupTitle.text("Успешно!");
+    //             popupText.text(mes);
+    //         } else{
+    //             $(".popup").css("display", "initial");
+    //             popupTitle.text("Что-то пошло не так:(");
+    //             popupText.text(mes);
+    //         }
 
 
+    //     }).fail(function(jqXHR, textStatus) {
+    //         alert("Request failed: " + textStatus);
+    //     });
 
-        }).fail(function(jqXHR, textStatus) {
-            alert("Request failed: " + textStatus);
-        });
+    // };
 
-    };
-
-    // Универсальная функция для работы с формами
-    var ajaxForm = function (form) {
-        var data = form.serialize(),
-            url = form.attr('action');
+    // // Универсальная функция для работы с формами
+    // var ajaxForm = function (form) {
+    //     var data = form.serialize(),
+    //         url = form.attr('action');
         
-        return $.ajax({
-            type: 'POST',
-            url: url,
-            dataType : 'JSON',
-            data: data
-        })
-    };
+    //     return $.ajax({
+    //         type: 'POST',
+    //         url: url,
+    //         dataType : 'JSON',
+    //         data: data
+    //     })
+    // };
 
 
 

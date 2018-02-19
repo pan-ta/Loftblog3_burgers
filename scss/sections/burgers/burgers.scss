@@ -13,19 +13,18 @@
 }
 
 .burgers__content {
-    width: 100vw;
-    // height: auto;
-    overflow: hidden; //как сделать, чтоб не скрывал по высоте?? убрать совсем??
+   
+    
 }
 
 .burgers__list {
-    display: flex;
+    width: 80vw;
     
 }
 
 .burgers__item {
     width: 80vw;
-    margin: 0 10vw;
+    margin: 0 3vw;
 }
 
 .burgers__item-content {
@@ -48,15 +47,20 @@
         flex-direction: column;
         margin-top: rem(80px);
     }
+    @include sm_phones {
+        margin-top: rem(30px);
+    }
 
 }
 .burgers__pic  {
     width: 50vw;
-    max-width: 530px;
-    margin-right: 10px;
+    max-width: 500px;
+    
+    margin-right: 15px;
     @include tablets {
         width: 60vw;
         margin-bottom: rem(20px);
+        margin-right: 0px;
     }
     @include phones {
         width: 80vw;
@@ -72,7 +76,7 @@
 
 
 .burgers__info {
-    width: 30vw;
+    width: 33vw;
     @include tablets {
         width: 80vw;
         text-align: center;
@@ -96,10 +100,11 @@
         width: 70vw;
     }
     @include phones {
-        width: 90vw;
+        
         margin-bottom: 20px;
     }
     @include sm_phones {
+        width: 80vw;
         font-size: 30px;
         margin-bottom: 10px;
     }

@@ -22,6 +22,12 @@
     &_margsmall {
         margin-bottom: rem(14px);
     }
+    @include sm_phones {
+        margin-bottom: 5px;
+        &_margsmall {
+            margin-bottom: 5px;
+        }
+    }
 }
 
 .form__row_center {
@@ -62,6 +68,9 @@
 .form__input--bigtext {
     height: rem(110px);
     resize: none;
+    @include sm_phones {
+        height: 50px;
+    }
     
 }
 

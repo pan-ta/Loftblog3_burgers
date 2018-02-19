@@ -58,6 +58,9 @@
     @include phones {
         width:70vw;
     }
+    @include sm_phones {
+        width:50vw;
+    }
 }
 
 .burgers__ingredients-pic {

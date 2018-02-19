@@ -37,6 +37,9 @@
         @include phones {
             margin-top: 30px;
         }
+        @include sm_phones {
+            margin-top: 5px;
+        }
     }
 }
 

@@ -99,6 +99,10 @@
         width: 90vw;
         margin-bottom: 20px;
     }
+    @include sm_phones {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
 }
 
 .burgers__desc {

@@ -35,6 +35,9 @@
 
 .team__acco-item {
     margin-bottom: rem(30px);
+    @include sm_phones {
+        margin-bottom: rem(10px);
+    }
     &_active {
         .team__acco-title {
             color: $orange;
@@ -46,6 +49,9 @@
             height: 120px;
             @include tablets {
                 height: 220px;
+            }
+            @include sm_phones {
+                height: 180px;
             }
         }
     }
@@ -75,6 +81,9 @@
     @include tablets {
         margin-left: 0;
         width: 80%;
+    }
+    @include sm_phones {
+        width: 95%;
     }
 }
 

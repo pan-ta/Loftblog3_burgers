@@ -36,6 +36,10 @@
 .about__icon {
     height: rem(80px);
     width: rem(100px);
+    @include sm_phones {
+        height: rem(40px);
+        width: rem(50px);
+    }
     
 }
 

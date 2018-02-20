@@ -27,7 +27,8 @@ $(document).ready(function(){
 
     
     $('.burgers__list').slick({
-        
+        prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><svg class="slider-controls__icon icon icon_color_white" id="slider-prev"><use xlink: href="img/sprite/sprite.svg#arrow-scroll"/></svg></button>',
+        nextArrow: '<button class="slick-next" aria-label="Next" type="button"><svg class="slider-controls__icon icon icon_color_white" id="slider-next"><use xlink: href="img/sprite/sprite.svg#arrow-scroll"/></svg></button>',
     });
     
 
@@ -86,53 +87,57 @@ $(document).ready(function(){
 
     })
 
+    
+
+   
     ///////////////////////////////////////////
     // form order
 
-    // $('#form-order').on('submit', submitForm);
 
-    // function submitForm (ev) {
-    //     ev.preventDefault();
+    $('#form-order').on('submit', submitForm);
+    
+    function submitForm (ev) {
+        ev.preventDefault();
         
-    //     var form = $(ev.target),
-    //         data = form.serialize(),
-    //         url = form.attr('action'),
-    //         type = form.attr('method');
+        var form = $(ev.target),
+            data = form.serialize(),
+            url = form.attr('action'),
+            type = form.attr('method');
 
-    //     ajaxForm(form).done(function(msg) {
-    //         var mes = msg.mes,
-    //             status = msg.status;
+        ajaxForm(form).done(function(msg) {
+            var mes = msg.mes,
+                status = msg.status;
             
             
-    //         if (status === 'OK') {
-    //             $(".popup").css("display", "initial");
-    //             popupTitle.text("Успешно!");
-    //             popupText.text(mes);
-    //         } else{
-    //             $(".popup").css("display", "initial");
-    //             popupTitle.text("Что-то пошло не так:(");
-    //             popupText.text(mes);
-    //         }
+            if (status === 'OK') {
+                $(".popup").css("display", "initial");
+                popupTitle.text("Успешно!");
+                popupText.text(mes);
+            } else{
+                $(".popup").css("display", "initial");
+                popupTitle.text("Что-то пошло не так:(");
+                popupText.text(mes);
+            }
 
 
-    //     }).fail(function(jqXHR, textStatus) {
-    //         alert("Request failed: " + textStatus);
-    //     });
+        }).fail(function(jqXHR, textStatus) {
+            alert("Request failed: " + textStatus);
+        });
 
-    // };
+    };
 
-    // // Универсальная функция для работы с формами
-    // var ajaxForm = function (form) {
-    //     var data = form.serialize(),
-    //         url = form.attr('action');
+    // Универсальная функция для работы с формами
+    var ajaxForm = function (form) {
+        var data = form.serialize(),
+            url = form.attr('action');
         
-    //     return $.ajax({
-    //         type: 'POST',
-    //         url: url,
-    //         dataType : 'JSON',
-    //         data: data
-    //     })
-    // };
+        return $.ajax({
+            type: 'POST',
+            url: url,
+            dataType : 'JSON',
+            data: data
+        })
+    };
 
 
 

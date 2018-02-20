@@ -23,34 +23,39 @@
             <ul>
                 <li>Имя:' . $name . '</li>
                 <li>Телефон: ' . $phone . '</li>
-                <li>Улица:' . $name . '</li>
-                <li>Дом: ' . $phone . '</li>
-                <li>Корпус:' . $name . '</li>
-                <li>Квартира: ' . $phone . '</li>
-                <li>Этаж:' . $name . '</li>
-                <li>Комментарий: ' . $phone . '</li>
+                <li>Улица:' . $street . '</li>
+                <li>Дом: ' . $house . '</li>
+                <li>Корпус:' . $building . '</li>
+                <li>Квартира: ' . $flat . '</li>
+                <li>Этаж:' . $floor . '</li>
+                <li>Комментарий: ' . $comment . '</li>
                 <li>Способ оплаты: ' . $payOption . '</li>
                 <li>Нужно ли перезванивать клиенту: ' . $dontDisturb . '</li>
             </ul>
         </body>
         </html>';
 
-    $headers = "From: Администратор сайта <burgers@yandex.ru>\r\n".
-                "MIME-Version: 1.0" . "\r\n" .
-                "Content-type: text/html; charset=UTF-8" . "\r\n";
+    $headers = "Content-type: text/html; charset=UTF-8";
+
+
+    // echo 'pan-ta@yandex.ru', 'Заказ', $mail_message, $headers;
+    
+
 
     $mail = mail('pan-ta@yandex.ru', 'Заказ', $mail_message, $headers);
 
+    
     $data = [];
 
     if ($mail) {
         $data['status'] = "OK";
-        $data['mes'] = "Письмо успешно отправлено";
+        $data['mes'] = "Заказ отправлен:) Мы свяжемся с Вами в ближайшее время!";
     }else{
         $data['status'] = "NO";
-        $data['mes'] = "На сервере произошла ошибка";
+        $data['mes'] = "На сервере произошла ошибка:(";
     }
 
+    
     echo json_encode($data);
 
 ?>

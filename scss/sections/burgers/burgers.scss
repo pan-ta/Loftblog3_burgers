@@ -19,7 +19,8 @@
 
 .burgers__list {
     width: 80vw;
-    
+    display: flex;
+    align-items: center;
 }
 
 .burgers__item {
@@ -156,22 +157,20 @@
     display: flex;
     justify-content: space-between;
     width: 90vw;
-
 }
 
-.burgers__slider-controlslink {
-    &:first-child {
-        transform: rotate(90deg);
 
-    }
-    &:last-child {
-        transform: rotate(-90deg);
-        
-    }
-}
 
 .slider-controls__icon {
     height: 5vh;
     width: 5vh;
-    
+    cursor: pointer;
+}
+
+#slider-prev {
+    transform: rotate(90deg);
+}
+
+#slider-next {
+    transform: rotate(-90deg);
 }

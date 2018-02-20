@@ -54,4 +54,7 @@
     @include phones {
         font-size: 45px;
     }
+    @include sm_phones {
+        font-size: 25px;
+    }
 }

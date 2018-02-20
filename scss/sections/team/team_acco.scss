@@ -5,6 +5,9 @@
     @include tablets {
         font-size: 25px;
     }
+    @include sm_phones {
+        font-size: 18px;
+    }
     
     &:before {
         content: "";
@@ -62,6 +65,7 @@
     width: 100px ;
     height: 100px;
     border-radius: 50%;
+    flex: 1 0 auto;
     background-position: center;
     background-size: cover;
     margin-top: rem(15px);
@@ -77,7 +81,7 @@
 
 .team__acco-text {
     margin-left: auto;
-    flex: 1;
+    flex: 1 0 auto;
     @include tablets {
         margin-left: 0;
         width: 80%;
